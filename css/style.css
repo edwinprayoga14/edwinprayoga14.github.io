@@ -268,14 +268,14 @@ footer .links a {
 /* Laptop */
 @media (max-width: 1366px) {
   html {
-    font-size: 80%;
+    font-size: 90%;
   }
 }
 
 /* Tablet */
 @media (max-width: 903px) {
   html {
-    font-size: 60%;
+    font-size: 80%;
   }
 
   #list-menu {
@@ -360,6 +360,6 @@ footer .links a {
 /* Mobile Phone */
 @media (max-width: 450px) {
   html {
-    font-size: 50%;
+    font-size: 70%;
   }
 }
