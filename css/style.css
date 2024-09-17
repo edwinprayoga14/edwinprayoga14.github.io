@@ -1,0 +1,365 @@
+:root {
+  --bg: #f5eded;
+  --accent: #e2dad6;
+  --primary: #7fa1c3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: black;
+  /* min-height: 4000px; */
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: rgba(127, 161, 195, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: auto;
+  text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary),
+    -1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
+  color: var(--bg);
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+  text-shadow: -1px -1px 0 var(--bg), 1px -1px 0 var(--bg), -1px 1px 0 var(--bg),
+    1px 1px 0 var(--bg);
+}
+
+.navbar .navbar-nav a {
+  color: var(--bg);
+  display: inline-block;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 0 1.5rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--accent);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.1rem solid var(--accent);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.8);
+}
+
+.navbar .navbar-extra a {
+  color: var(--bg);
+  margin-left: 2rem;
+  font-size: 1.2rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--accent);
+}
+
+#list-menu {
+  display: none;
+}
+
+/* hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/hero-section-bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero .content {
+  font-size: 2rem;
+  padding: 5% 10%;
+}
+
+.hero .content h1 {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--bg);
+  text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary),
+    -1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
+  /* line-height: 1.2; */
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+  text-shadow: -1px -1px 0 var(--bg), 1px -1px 0 var(--bg), -1px 1px 0 var(--bg),
+    1px 1px 0 var(--bg);
+}
+
+.hero .content h2 {
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--bg);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero .content .cta {
+  display: inline-block;
+  margin-top: 5rem;
+  padding: 1rem 2rem;
+  color: var(--bg);
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: var(--primary);
+  border-radius: 0.8rem;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading Section */
+.about,
+.catalog {
+  padding: 6rem 5% 2rem;
+}
+.contact {
+  padding: 6rem 5% 6rem;
+  background-color: rgba(127, 161, 195, 0.8);
+}
+
+.about h1,
+.catalog h1,
+.contact h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* About Section */
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 60rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 40rem;
+  padding: 0 2rem;
+}
+
+.about .row .content h2 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about .row .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+
+/* catalog Section*/
+.catalog .desc {
+  font-weight: 300;
+}
+
+.catalog .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.catalog .row .card {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.catalog .row .card img {
+  padding: 0 2rem;
+  object-fit: cover;
+  height: 15rem;
+  width: 30rem;
+}
+
+.catalog .row .card .card-tittle {
+  margin-top: 1rem;
+}
+
+/* Contact Section */
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.contact .row .address {
+  /* max-width: 30rem; */
+}
+
+.contact .row .map {
+  object-fit: cover;
+  flex-grow: 1;
+  height: 30rem;
+}
+
+/* Footer Section */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+footer .social {
+  padding: 1rem 2rem;
+}
+
+footer .social a {
+  color: var(--bg);
+  margin: 1rem 1rem;
+}
+
+footer .links {
+  padding: 1rem 2rem;
+}
+
+footer .links a {
+  color: var(--bg);
+  margin: 1rem 2rem;
+}
+
+/* ------ Media Queries ------- */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 903px) {
+  html {
+    font-size: 60%;
+  }
+
+  #list-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(127, 161, 195, 0.9);
+    width: 25vh;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.3);
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  /* .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.5rem;
+  } */
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  /* .contact .row .map {
+    height: 30rem;
+  } */
+
+  .modal-content {
+    flex-wrap: wrap;
+  }
+
+  .floating-wa {
+    transform: scale(0.8);
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
