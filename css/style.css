@@ -35,7 +35,8 @@ body {
   z-index: 9999;
 }
 
-.navbar .navbar-logo {
+.navbar .navbar-logo,
+footer .footer-logo {
   font-size: 2rem;
   font-weight: 700;
   margin-right: auto;
@@ -44,7 +45,8 @@ body {
   color: var(--bg);
 }
 
-.navbar .navbar-logo span {
+.navbar .navbar-logo span,
+footer .footer-logo span {
   color: var(--primary);
   text-shadow: -1px -1px 0 var(--bg), 1px -1px 0 var(--bg), -1px 1px 0 var(--bg),
     1px 1px 0 var(--bg);
@@ -107,7 +109,7 @@ body {
 }
 
 .hero .content h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 700;
   color: var(--bg);
   text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary),
@@ -143,11 +145,11 @@ body {
 /* Heading Section */
 .about,
 .catalog {
-  padding: 6rem 5% 2rem;
+  padding: 4rem 5%;
 }
 .contact {
-  padding: 6rem 5% 6rem;
-  background-color: rgba(127, 161, 195, 0.8);
+  padding: 4rem 5%;
+  background-color: var(--accent);
 }
 
 .about h1,
@@ -155,7 +157,69 @@ body {
 .contact h1 {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+}
+
+/* catalog Section*/
+.catalog .desc {
+  font-weight: 300;
+}
+
+.catalog .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.catalog .row .card {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.catalog .row .card img {
+  padding: 0 2rem;
+  object-fit: cover;
+  height: 15rem;
+  width: 30rem;
+}
+
+/* .catalog .row .card .card-tittle {
+  margin-top: 1rem;
+} */
+
+.catalog .row .card .card-price {
+  font-size: 1.1rem;
+}
+
+.catalog .row .card input {
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+/* Contact Section */
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+}
+/* 
+.contact .row .content {
+  max-width: 30rem;
+} */
+
+.contact .row .content p {
+  margin-bottom: 1rem;
+}
+.contact .row iframe {
+  object-fit: cover;
+  flex-grow: 1;
+  height: 20rem;
 }
 
 /* About Section */
@@ -186,64 +250,14 @@ body {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5rem;
-}
-
-/* catalog Section*/
-.catalog .desc {
-  font-weight: 300;
-}
-
-.catalog .row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5rem;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
-.catalog .row .card {
-  text-align: center;
-  padding-bottom: 4rem;
-}
-
-.catalog .row .card img {
-  padding: 0 2rem;
-  object-fit: cover;
-  height: 15rem;
-  width: 30rem;
-}
-
-.catalog .row .card .card-tittle {
-  margin-top: 1rem;
-}
-
-/* Contact Section */
-.contact .row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
-}
-
-.contact .row .address {
-  /* max-width: 30rem; */
-}
-
-.contact .row .map {
-  object-fit: cover;
-  flex-grow: 1;
-  height: 30rem;
+  text-align: justify;
 }
 
 /* Footer Section */
 footer {
-  background-color: var(--primary);
+  background-color: rgb(127, 161, 195, 0.8);
   text-align: center;
   padding-top: 2rem;
-  margin-top: 2rem;
 }
 
 footer .social {
@@ -253,15 +267,19 @@ footer .social {
 footer .social a {
   color: var(--bg);
   margin: 1rem 1rem;
+  font-size: 1.5rem;
 }
 
 footer .links {
   padding: 1rem 2rem;
+  font-size: 1.5rem;
 }
 
 footer .links a {
   color: var(--bg);
-  margin: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
 }
 
 /* ------ Media Queries ------- */
@@ -275,7 +293,7 @@ footer .links a {
 /* Tablet */
 @media (max-width: 903px) {
   html {
-    font-size: 80%;
+    font-size: 90%;
   }
 
   #list-menu {
@@ -331,35 +349,22 @@ footer .links a {
     padding: 0;
   }
 
-  /* .about .row .content h3 {
-    margin-top: 1rem;
-    font-size: 2rem;
-  }
-
-  .about .row .content p {
-    font-size: 1.5rem;
-  } */
-
   .contact .row {
     flex-wrap: wrap;
   }
-
-  /* .contact .row .map {
-    height: 30rem;
-  } */
 
   .modal-content {
     flex-wrap: wrap;
   }
 
-  .floating-wa {
+  /* .floating-wa {
     transform: scale(0.8);
-  }
+  } */
 }
 
 /* Mobile Phone */
 @media (max-width: 450px) {
   html {
-    font-size: 70%;
+    font-size: 75%;
   }
 }
