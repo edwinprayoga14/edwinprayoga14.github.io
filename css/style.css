@@ -39,6 +39,7 @@ body {
 footer .footer-logo {
   font-size: 2rem;
   font-weight: 700;
+  line-height: 1.1;
   margin-right: auto;
   text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary),
     -1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
@@ -111,6 +112,7 @@ footer .footer-logo span {
 .hero .content h1 {
   font-size: 1.5em;
   font-weight: 700;
+  line-height: 1.2;
   color: var(--bg);
   text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary),
     -1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
@@ -126,6 +128,7 @@ footer .footer-logo span {
 .hero .content h2 {
   font-size: 1em;
   font-weight: 300;
+  margin-top: 1rem;
   color: var(--bg);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
@@ -169,7 +172,7 @@ footer .footer-logo span {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   align-content: center;
 }
@@ -180,10 +183,9 @@ footer .footer-logo span {
 }
 
 .catalog .row .card img {
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
   object-fit: cover;
-  height: 15rem;
-  width: 30rem;
+  width: 24rem;
 }
 
 /* .catalog .row .card .card-tittle {
@@ -208,10 +210,10 @@ footer .footer-logo span {
   align-items: flex-start;
   align-content: center;
 }
-/* 
+
 .contact .row .content {
-  max-width: 30rem;
-} */
+  max-width: 32rem;
+}
 
 .contact .row .content p {
   margin-bottom: 1rem;
@@ -228,7 +230,7 @@ footer .footer-logo span {
 }
 
 .about .row .about-img {
-  flex: 1 1 60rem;
+  flex: 1 1 40rem;
 }
 
 .about .row .about-img img {
